@@ -2,35 +2,35 @@ export default {
   items: [
     {
       name: "HOME",
-      url: "#home",
+      url: "/home",
     },
     {
       name: "NEWS",
-      url: "#news",
+      url: "/news",
     },
     {
       name: "TOUR",
-      url: "#tour",
+      url: "/tour",
     },
     {
       name: "MUSIC",
-      url: "#music",
+      url: "/music",
     },
     {
       name: "VIDEOS",
-      url: "#videos",
+      url: "/videos",
     },
     {
       name: "MERCH",
-      url: "#merch",
+      url: "/merch",
     },
     {
       name: "ABOUT",
-      url: "#about",
+      url: "/about",
     },
     {
       name: "CONTACT",
-      url: "#contact",
+      url: "/contact",
     },
   ],
 };

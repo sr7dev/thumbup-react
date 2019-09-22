@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Nav, NavItem} from "reactstrap";
+import {Nav, NavItem, NavLink} from "reactstrap";
 import PropTypes from "prop-types";
 import {AppNavbarBrand, AppSidebarToggler} from "@coreui/react";
 import {Container} from "reactstrap";
@@ -25,30 +25,29 @@ class DefaultHeader extends Component {
   render() {
     return (
       <React.Fragment>
-        <Container>
-          <AppNavbarBrand
-            full={{src: logo, width: 185, height: 57, alt: "BISHOPS Logo"}}
-            minimized={{src: logo, width: 117, height: 36, alt: "BISHOPS Logo"}}
-          />
-          <Nav className="header-nav" navbar>
-            {navigation.items.map((item, index) => {
-              return (
-                <NavItem
-                  data-id={item.url}
-                  key={index}
-                  className={index === 0 ? "active" : ""}
-                  onClick={() => this.toggleMenu(item.url, index)}
-                >
-                  <span className="nav-link-span">{item.name}</span>
-                </NavItem>
-              );
-            })}
-          </Nav>
+        <AppNavbarBrand
+          full={{src: logo, width: 185, height: 57, alt: "BISHOPS Logo"}}
+          minimized={{src: logo, width: 117, height: 36, alt: "BISHOPS Logo"}}
+        />
+        <Nav className="header-nav" navbar>
+          {navigation.items.map((item, index) => {
+            return (
+              <NavItem
+                data-id={item.url}
+                key={index}
+                className={index === 0 ? "active" : ""}
+                // onClick={() => this.toggleMenu(item.url, index)}
 
-          <AppSidebarToggler className="ml-auto menu-toggler" mobile>
-            <i className="fa fa-bars"></i>
-          </AppSidebarToggler>
-        </Container>
+              >
+                <NavLink className="nav-link-span" to={item.url} >{item.name}</NavLink>
+              </NavItem>
+            );
+          })}
+        </Nav>
+
+        <AppSidebarToggler className="ml-auto menu-toggler" mobile>
+          <i className="fa fa-bars"></i>
+        </AppSidebarToggler>
       </React.Fragment>
     );
   }

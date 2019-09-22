@@ -82,7 +82,8 @@ h2, .h2 {
   background-color: transparent;
   height: 94px;
   border-bottom: none;
-  justify-content: flex-start;
+  justify-content: center;
+  position: relative;
   @media (max-width: 991.98px) {
     height: 66px;
   }
@@ -117,10 +118,11 @@ h2, .h2 {
       }
     }
   }
-  .navbar-brand {
-    
+  .navbar-brand {    
     width: 185px;
     height: 57px;
+    position: absolute;
+    left: 0;
     @media(max-width: 991.98px) {
       position: unset;
       margin-left: 0px;
@@ -189,9 +191,7 @@ label {
 }
 .mobile-menu {
   display: flex;
-  @media (max-width:659.88px) {
-    display: flex;
-  }
+  position: relative;
 }
 
 html:not([dir="rtl"]) .sidebar {
@@ -516,6 +516,10 @@ section {
 }
 
 #contact {
+  h2, h2 {
+    display: block;
+    margin-bottom: 3rem;
+  }
   &::before{
     opacity: 0.3;
     background-image: url(../assets/img/photos/bg-8.png);
