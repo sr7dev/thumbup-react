@@ -26,7 +26,7 @@ class Home extends Component {
         </div>
         <div className="info">© 2019 Mamafesta Music LLC</div>
       </section>
-    )
+    );
   }
 }
 export default enhance(Home);

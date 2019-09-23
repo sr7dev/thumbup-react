@@ -38,8 +38,7 @@ class News extends Component {
           })}
         </Container>
       </section>
-        
-    )
+    );
   }
 }
 export default enhance(News);

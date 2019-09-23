@@ -14,7 +14,7 @@ const enhance = connect(mapStateToProps);
 class Tour extends Component {
   render() {
     const {data} = this.props;
-    return (        
+    return (
       <section id="tour">
         <Container>
           <h2>tour</h2>
@@ -41,7 +41,7 @@ class Tour extends Component {
           })}
         </Container>
       </section>
-    )
+    );
   }
 }
 export default enhance(Tour);

@@ -35,7 +35,7 @@ class Merch extends Component {
           </Row>
         </Container>
       </section>
-    )
+    );
   }
 }
 export default enhance(Merch);

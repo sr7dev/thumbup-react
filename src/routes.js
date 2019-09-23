@@ -12,7 +12,6 @@ const Merch = React.lazy(() => import("./views/Merch"));
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   {path: "/", exact: true, name: "Home", component: Home},
-  // {path: "/dashboard", name: "Dashboard", component: Dashboard},
   {path: "/home", exact: true, name: "Home1", component: Home},
   {path: "/news", name: "News", component: News},
   {path: "/tour", name: "Tour", component: Tour},

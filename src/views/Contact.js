@@ -12,49 +12,52 @@ const mapStateToProps = state => {
 
 const enhance = connect(mapStateToProps);
 class Contact extends Component {
-  
   constructor(props) {
     super(props);
-    this.state = { first_name: '', last_name: 'Name', email: 'email@example.com', message: '' };
+    this.state = {
+      first_name: "",
+      last_name: "Name",
+      email: "email@example.com",
+      message: "",
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
+
   handleChange(event) {
-    this.setState({[event.target.name]: event.target.value})
+    this.setState({[event.target.name]: event.target.value});
   }
 
-  handleSubmit (event) {
-    event.preventDefault()
+  handleSubmit(event) {
+    event.preventDefault();
 
     const templateId = "template_U9xnORwc";
 
     this.sendFeedback(
       templateId,
       this.state.email,
-      'info@jamfeed.com',
-      this.state.message)
+      "info@jamfeed.com",
+      this.state.message
+    );
 
     this.setState({
-      formSubmitted: true
-    })
+      formSubmitted: true,
+    });
   }
-  sendFeedback (templateId, senderEmail, receiverEmail, message) {
+  sendFeedback(templateId, senderEmail, receiverEmail, message) {
     console.log(senderEmail, receiverEmail, message);
-    window.emailjs.send(
-      'mailgun',
-      templateId,
-      {
+    window.emailjs
+      .send("mailgun", templateId, {
         from_name: this.state.first_name + " " + this.state.last_name,
         senderEmail,
         receiverEmail,
-        message_html: message
+        message_html: message,
       })
       .then(res => {
-        this.setState({ formEmailSent: true })
+        this.setState({formEmailSent: true});
       })
       // Handle errors here however you like, or use a React error boundary
-      .catch(err => console.error('Failed to send feedback. Error: ', err))
+      .catch(err => console.error("Failed to send feedback. Error: ", err));
   }
 
   render() {
@@ -75,32 +78,48 @@ class Contact extends Component {
               <form onSubmit={this.handleSubmit}>
                 <Row>
                   <Col xs="6" className="pr-2 pr-sm-3">
-                    <Input type="text" id="first_name" className="email-addr" required 
+                    <Input
+                      type="text"
+                      id="first_name"
+                      className="email-addr"
+                      required
                       onChange={this.handleChange}
-                      name = "first_name"
+                      name="first_name"
                     />
                     <Label htmlFor="first_name">First Name *</Label>
                   </Col>
                   <Col xs="6" className="pl-2 pl-sm-3">
-                    <Input type="text" id="last_name" className="email-addr" required 
+                    <Input
+                      type="text"
+                      id="last_name"
+                      className="email-addr"
+                      required
                       onChange={this.handleChange}
-                      name = "last_name"
+                      name="last_name"
                     />
                     <Label htmlFor="last_name">Last Name *</Label>
                   </Col>
                 </Row>
                 <Row>
                   <Col>
-                    <Input type="text" id="email" className="email-addr" required
+                    <Input
+                      type="text"
+                      id="email"
+                      className="email-addr"
+                      required
                       onChange={this.handleChange}
-                      name = "email"
+                      name="email"
                     />
                     <Label htmlFor="email">Email *</Label>
                   </Col>
                 </Row>
                 <Row>
                   <Col>
-                    <Input type="textarea" id="message" className="email-addr" required 
+                    <Input
+                      type="textarea"
+                      id="message"
+                      className="email-addr"
+                      required
                       name="message"
                       onChange={this.handleChange}
                     />
@@ -117,7 +136,7 @@ class Contact extends Component {
           </Row>
         </Container>
       </section>
-    )
+    );
   }
 }
 export default enhance(Contact);

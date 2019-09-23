@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import { Col, Row, Container} from "reactstrap";
+import {Col, Row, Container} from "reactstrap";
 import ReactPlayer from "react-player";
 import {dataSelector} from "../modules/app";
 
@@ -40,7 +40,7 @@ class Videos extends Component {
           </Row>
         </Container>
       </section>
-    )
+    );
   }
 }
 export default enhance(Videos);

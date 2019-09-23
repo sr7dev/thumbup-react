@@ -41,7 +41,7 @@ class Music extends Component {
           })}
         </Container>
       </section>
-    )
+    );
   }
 }
 export default enhance(Music);

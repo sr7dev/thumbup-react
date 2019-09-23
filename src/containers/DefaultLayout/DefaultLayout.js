@@ -2,7 +2,7 @@ import React, {Component, Suspense} from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
 
 import {Nav, NavItem} from "reactstrap";
-import { NavLink } from 'react-router-dom';
+import {NavLink} from "react-router-dom";
 import {AppSidebar} from "@coreui/react";
 
 import {AppHeader} from "@coreui/react";
@@ -18,7 +18,6 @@ class DefaultLayout extends Component {
   constructor() {
     super();
     this.toggleMenu = this.toggleMenu.bind(this);
-
   }
   toggleMenu() {
     document.querySelector("body").classList.toggle("sidebar-show");
@@ -39,12 +38,10 @@ class DefaultLayout extends Component {
             <Nav className="header-nav" navbar>
               {navigation.items.map((item, index) => {
                 return (
-                  <NavItem
-                    data-id={item.url}
-                    key={index}
-                    onClick={this.toggleMenu}
-                  >
-                    <NavLink className="nav-link" to={item.url} >{item.name}</NavLink>
+                  <NavItem data-id={item.url} key={index} onClick={this.toggleMenu}>
+                    <NavLink className="nav-link" to={item.url}>
+                      {item.name}
+                    </NavLink>
                   </NavItem>
                 );
               })}
@@ -64,7 +61,7 @@ class DefaultLayout extends Component {
                     />
                   ) : null;
                 })}
-                <Redirect from="/" to="/dashboard" />
+                <Redirect from="/" to="/home" />
               </Switch>
             </Suspense>
           </main>

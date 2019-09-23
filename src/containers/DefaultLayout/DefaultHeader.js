@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Nav, NavItem} from "reactstrap";
-import { NavLink } from 'react-router-dom';
+import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
 import {AppNavbarBrand, AppSidebarToggler} from "@coreui/react";
 import navigation from "../../_nav";
@@ -38,11 +38,10 @@ class DefaultHeader extends Component {
         <Nav className="header-nav" navbar>
           {navigation.items.map((item, index) => {
             return (
-              <NavItem
-                data-id={item.url}
-                key={index}
-              >
-                <NavLink className="nav-link" to={item.url} >{item.name}</NavLink>
+              <NavItem data-id={item.url} key={index}>
+                <NavLink className="nav-link" to={item.url}>
+                  {item.name}
+                </NavLink>
               </NavItem>
             );
           })}
