@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {Col, Row, Container} from "reactstrap";
 import ReactPlayer from "react-player";
 import {dataSelector} from "../modules/app";
+import PerfectScrollbar from "react-perfect-scrollbar";
 
 const mapStateToProps = state => {
   return {
@@ -17,28 +18,30 @@ class Videos extends Component {
     const {data} = this.props;
     return (
       <section id="videos">
-        <Container>
-          <h2>videos</h2>
-          <Row className="video-items">
-            {data.videoItems.map((item, index1) => {
-              return (
-                <Col md="6" key={index1}>
-                  <div className="video-item">
-                    <div className="player-wrapper">
-                      <ReactPlayer
-                        url={item.url}
-                        width="100%"
-                        height="100%"
-                        className="react-player"
-                      ></ReactPlayer>
+        <PerfectScrollbar speed={0.8} className="scroll-area" horizontal={false}>
+          <Container>
+            <h2>videos</h2>
+            <Row className="video-items">
+              {data.videoItems.map((item, index1) => {
+                return (
+                  <Col md="6" key={index1}>
+                    <div className="video-item">
+                      <div className="player-wrapper">
+                        <ReactPlayer
+                          url={item.url}
+                          width="100%"
+                          height="100%"
+                          className="react-player"
+                        ></ReactPlayer>
+                      </div>
+                      <div className="title">{item.title}</div>
                     </div>
-                    <div className="title">{item.title}</div>
-                  </div>
-                </Col>
-              );
-            })}
-          </Row>
-        </Container>
+                  </Col>
+                );
+              })}
+            </Row>
+          </Container>
+        </PerfectScrollbar>
       </section>
     );
   }
