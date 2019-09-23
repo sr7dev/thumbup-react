@@ -13,7 +13,7 @@ const Merch = React.lazy(() => import("./views/Merch"));
 const routes = [
   {path: "/", exact: true, name: "Home", component: Home},
   // {path: "/dashboard", name: "Dashboard", component: Dashboard},
-  {path: "/home", exact: true, name: "Home", component: Home},
+  {path: "/home", exact: true, name: "Home1", component: Home},
   {path: "/news", name: "News", component: News},
   {path: "/tour", name: "Tour", component: Tour},
   {path: "/music", name: "Music", component: Music},

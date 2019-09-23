@@ -29,6 +29,18 @@ export const newsItems = [
     content:
       '"The Mammoths are known for their “fiery unapologetic live shows” (a quote from AMF’s Alex Vallejo) so it’s no surprise that they delivered the liveliest performance we’ve seen on the Mean Eyed Cat stage."',
   },
+  {
+    img: news_2,
+    title: "Live Series: The Mammoths at Mean Eyed Cat",
+    content:
+      '"The Mammoths are known for their “fiery unapologetic live shows” (a quote from AMF’s Alex Vallejo) so it’s no surprise that they delivered the liveliest performance we’ve seen on the Mean Eyed Cat stage."',
+  },
+  {
+    img: news_2,
+    title: "Live Series: The Mammoths at Mean Eyed Cat",
+    content:
+      '"The Mammoths are known for their “fiery unapologetic live shows” (a quote from AMF’s Alex Vallejo) so it’s no surprise that they delivered the liveliest performance we’ve seen on the Mean Eyed Cat stage."',
+  },
 ];
 
 export const tourItems = [

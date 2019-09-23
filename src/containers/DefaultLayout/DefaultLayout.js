@@ -2,6 +2,7 @@ import React, {Component, Suspense} from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
 
 import {Nav, NavItem} from "reactstrap";
+import { NavLink } from 'react-router-dom';
 import {AppSidebar} from "@coreui/react";
 
 import {AppHeader} from "@coreui/react";
@@ -14,11 +15,13 @@ import navigation from "../../_nav";
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
 
 class DefaultLayout extends Component {
-  toggleMenu(id, index) {
+  constructor() {
+    super();
+    this.toggleMenu = this.toggleMenu.bind(this);
+
+  }
+  toggleMenu() {
     document.querySelector("body").classList.toggle("sidebar-show");
-    document.querySelectorAll("li.nav-item").forEach(el => el.classList.remove("active"));
-    document.querySelector('.nav-item[data-id="' + id + '"]').classList.add("active");
-    this.props.movePage(index);
   }
   render() {
     const loading = () => (
@@ -33,16 +36,15 @@ class DefaultLayout extends Component {
         </AppHeader>
         <div className="app-body">
           <AppSidebar className="d-lg-none">
-            <Nav>
+            <Nav className="header-nav" navbar>
               {navigation.items.map((item, index) => {
                 return (
                   <NavItem
                     data-id={item.url}
                     key={index}
-                    className={index === 0 ? "active" : ""}
-                    onClick={() => this.toggleMenu(item.url, index)}
+                    onClick={this.toggleMenu}
                   >
-                    <span className="nav-link-span">{item.name}</span>
+                    <NavLink className="nav-link" to={item.url} >{item.name}</NavLink>
                   </NavItem>
                 );
               })}

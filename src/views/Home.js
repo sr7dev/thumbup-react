@@ -12,10 +12,6 @@ const mapStateToProps = state => {
 
 const enhance = connect(mapStateToProps);
 class Home extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <section id="home">

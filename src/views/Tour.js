@@ -12,10 +12,6 @@ const mapStateToProps = state => {
 
 const enhance = connect(mapStateToProps);
 class Tour extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     const {data} = this.props;
     return (        

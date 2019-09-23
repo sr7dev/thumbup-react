@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {Nav, NavItem, NavLink} from "reactstrap";
+import {Nav, NavItem} from "reactstrap";
+import { NavLink } from 'react-router-dom';
 import PropTypes from "prop-types";
 import {AppNavbarBrand, AppSidebarToggler} from "@coreui/react";
-import {Container} from "reactstrap";
 import navigation from "../../_nav";
 import logo from "../../assets/img/brand/logo.svg";
 import {connect} from "react-redux";
@@ -16,10 +16,16 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
+  changeTheme() {
+    // document.querySelector("body").classList.toggle("white-theme");
+    // document
+    //   .querySelectorAll(".nav-link")
+    //   .forEach(el => el.classList.toggle("white-theme"));
+    // document.querySelectorAll(".nav").forEach(el => el.classList.toggle("white-theme"));
+    // document.querySelectorAll(".btn").forEach(el => el.classList.toggle("white-theme"));
+  }
   toggleMenu(id, index) {
     document.querySelector("body").classList.toggle("sidebar-show");
-    document.querySelectorAll("li.nav-item").forEach(el => el.classList.remove("active"));
-    document.querySelector('.nav-item[data-id="' + id + '"]').classList.add("active");
     this.props.movePage(index);
   }
   render() {
@@ -35,14 +41,14 @@ class DefaultHeader extends Component {
               <NavItem
                 data-id={item.url}
                 key={index}
-                className={index === 0 ? "active" : ""}
-                // onClick={() => this.toggleMenu(item.url, index)}
-
               >
-                <NavLink className="nav-link-span" to={item.url} >{item.name}</NavLink>
+                <NavLink className="nav-link" to={item.url} >{item.name}</NavLink>
               </NavItem>
             );
           })}
+          {/* <NavItem onClick={this.changeTheme}>
+            <i className="fa fa-exchange nav-link"></i>
+          </NavItem> */}
         </Nav>
 
         <AppSidebarToggler className="ml-auto menu-toggler" mobile>
