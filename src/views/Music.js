@@ -22,23 +22,25 @@ class Music extends Component {
             <h2>music</h2>
             {data.musicItems.map((item, index1) => {
               return (
-                <Row className="music-items" key={index1}>
-                  <Col md="6">
-                    <div className="music-item">
-                      <img src={item.img} alt="" />
-                      <div className="title">{item.title}</div>
-                    </div>
-                  </Col>
-                  <Col md="6" className="d-none d-md-inline-block">
-                    {item.items.map((title, id) => {
-                      return (
-                        <div className="music-item-titles" key={id}>
-                          {title}
-                        </div>
-                      );
-                    })}
-                  </Col>
-                </Row>
+                <a href={item.url}>
+                  <Row className="music-items" key={index1}>
+                    <Col md="6">
+                      <div className="music-item">
+                        <img src={item.img} alt="" />
+                        <div className="title">{item.title}</div>
+                      </div>
+                    </Col>
+                    <Col md="6" className="d-none d-md-inline-block">
+                      {item.items.map((title, id) => {
+                        return (
+                          <div className="music-item-titles" key={id}>
+                            {title}
+                          </div>
+                        );
+                      })}
+                    </Col>
+                  </Row>
+                </a>
               );
             })}
           </Container>

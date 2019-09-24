@@ -24,13 +24,15 @@ class Merch extends Component {
               {data.merchItems.map((item, index) => {
                 return (
                   <Col md="4" key={index}>
-                    <div className="merch-item">
-                      <img src={item.img} alt="" />
-                      <div>
-                        <div className="title">{item.title}</div>
-                        <div className="price">${item.price}</div>
+                    <a href={item.url}>
+                      <div className="merch-item">
+                        <img src={item.img} alt="" />
+                        <div>
+                          <div className="title">{item.title}</div>
+                          <div className="price">${item.price}</div>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   </Col>
                 );
               })}

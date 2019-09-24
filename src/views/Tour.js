@@ -28,10 +28,10 @@ class Tour extends Component {
                     <div className="month">{item.month}</div>
                   </Col>
                   <Col xs="6" md="6" className="get-ticket">
-                    <div>
+                    <a href={item.url}>
                       <div className="title">{item.title}</div>
                       <div className="content">{item.address}</div>
-                    </div>
+                    </a>
                   </Col>
                   <Col xs="3" md="3" className="get-ticket">
                     <Button color="dark" outline className="btn-pill read-more">

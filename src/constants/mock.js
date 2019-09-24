@@ -22,24 +22,28 @@ export const newsItems = [
     title: "The Mammoths - Austin Music Foundation Artist of the Month",
     content:
       '"The Mammoths prove that rock ‘n’ roll is far from dead - in fact, it’s thriving within each member of this impassioned rock band. Their fusion of psychedelia and blues into a nod-worthy set of ',
+    url: "https://liveforlivemusic.com/features/mamafesta-kaaboo-texas-2019/"
   },
   {
     img: news_2,
     title: "Live Series: The Mammoths at Mean Eyed Cat",
     content:
       '"The Mammoths are known for their “fiery unapologetic live shows” (a quote from AMF’s Alex Vallejo) so it’s no surprise that they delivered the liveliest performance we’ve seen on the Mean Eyed Cat stage."',
+    url: "http://www.dopeandtight.com/2018/07/11/mamafesta/"
   },
   {
     img: news_2,
     title: "Live Series: The Mammoths at Mean Eyed Cat",
     content:
       '"The Mammoths are known for their “fiery unapologetic live shows” (a quote from AMF’s Alex Vallejo) so it’s no surprise that they delivered the liveliest performance we’ve seen on the Mean Eyed Cat stage."',
+    url: "http://www.dopeandtight.com/2018/07/11/mamafesta/"
   },
   {
     img: news_2,
     title: "Live Series: The Mammoths at Mean Eyed Cat",
     content:
       '"The Mammoths are known for their “fiery unapologetic live shows” (a quote from AMF’s Alex Vallejo) so it’s no surprise that they delivered the liveliest performance we’ve seen on the Mean Eyed Cat stage."',
+    url: "http://www.dopeandtight.com/2018/07/11/mamafesta/"
   },
 ];
 
@@ -49,18 +53,24 @@ export const tourItems = [
     month: "AUG",
     title: "The Mammoths, Visit Austin",
     address: "Merchant Exchange - San Francisco, CA",
+    url: "https://holdmyticket.com/event/347915?fbclid=IwAR3LP-V8tuhUoEVvVggMVH4jvo9zS3jCfaJvCCDeGPaLMkjO9Cz4Ku_Wl0Y",
+    url1: "https://tickets.vendini.com/ticket-software.html?t=tix&w=580ec56c47e186e7d96c0a526849e370&vqitq=54d006dc-262f-47b6-89e1-577b4bcb6576&vqitp=df4913e9-9e90-4607-8900-559d489a220d&vqitts=1567562968&vqitc=vendini&vqite=itl&vqitrt=Safetynet&vqith=9068e453cf7079a25ab30edb8bf38dc3&fbclid=IwAR2wYgNp1VpMU_PQHhmqLK93DrKQdI6czWP-yof2M0VGCReCJDQBojr55Fk"
   },
   {
     day: "25",
     month: "AUG",
     title: "The Mammoths",
     address: "The Basement - Nashville, TN",
+    url: "https://holdmyticket.com/event/347915?fbclid=IwAR3LP-V8tuhUoEVvVggMVH4jvo9zS3jCfaJvCCDeGPaLMkjO9Cz4Ku_Wl0Y",
+    url1: "https://tickets.vendini.com/ticket-software.html?t=tix&w=580ec56c47e186e7d96c0a526849e370&vqitq=54d006dc-262f-47b6-89e1-577b4bcb6576&vqitp=df4913e9-9e90-4607-8900-559d489a220d&vqitts=1567562968&vqitc=vendini&vqite=itl&vqitrt=Safetynet&vqith=9068e453cf7079a25ab30edb8bf38dc3&fbclid=IwAR2wYgNp1VpMU_PQHhmqLK93DrKQdI6czWP-yof2M0VGCReCJDQBojr55Fk"
   },
   {
     day: "29",
     month: "AUG",
     title: "The Mammoths",
     address: "The Mohawk - Austin, TX",
+    url: "https://holdmyticket.com/event/347915?fbclid=IwAR3LP-V8tuhUoEVvVggMVH4jvo9zS3jCfaJvCCDeGPaLMkjO9Cz4Ku_Wl0Y",
+    url1: "https://tickets.vendini.com/ticket-software.html?t=tix&w=580ec56c47e186e7d96c0a526849e370&vqitq=54d006dc-262f-47b6-89e1-577b4bcb6576&vqitp=df4913e9-9e90-4607-8900-559d489a220d&vqitts=1567562968&vqitc=vendini&vqite=itl&vqitrt=Safetynet&vqith=9068e453cf7079a25ab30edb8bf38dc3&fbclid=IwAR2wYgNp1VpMU_PQHhmqLK93DrKQdI6czWP-yof2M0VGCReCJDQBojr55Fk"
   },
 ];
 
@@ -81,6 +91,7 @@ export const musicItems = [
       "10.  Next to You",
       "11.  For a Few",
     ],
+    url: "https://open.spotify.com/album/3BoeODUpTgMqRgikaC5AGC"
   },
   {
     img: music_2,
@@ -90,6 +101,7 @@ export const musicItems = [
       "2.  Lose Yourself - Live at Kaboo",
       "3.  No Bullets - - Live at Kaboo",
     ],
+    url: "https://open.spotify.com/album/71Z0KXNvKDTx2Z9wfxXIfg"
   },
 ];
 
@@ -117,31 +129,37 @@ export const merchItems = [
     img: merch_1,
     title: "Mamafesta T-Shirt - Grey",
     price: "20.00",
+    url: "https://www.facebook.com/Mamafesta/posts/festa-merch-now-available-shirts-15-s-m-l-xl-super-soft-next-level-tees-grey-shi/1523369217687559/"
   },
   {
     img: merch_2,
     title: "The Mammoths T Shirt - Tan",
     price: "20.00",
+    url: "https://www.facebook.com/Mamafesta/posts/festa-merch-now-available-shirts-15-s-m-l-xl-super-soft-next-level-tees-grey-shi/1523369217687559/"
   },
   {
     img: merch_3,
     title: "Mamafesta Sticker",
     price: "5.00",
+    url: "https://www.facebook.com/Mamafesta/posts/festa-merch-now-available-shirts-15-s-m-l-xl-super-soft-next-level-tees-grey-shi/1523369217687559/"
   },
   {
     img: merch_3,
     title: "Mamafesta Sticker",
     price: "5.00",
+    url: "https://www.facebook.com/Mamafesta/posts/festa-merch-now-available-shirts-15-s-m-l-xl-super-soft-next-level-tees-grey-shi/1523369217687559/"
   },
   {
     img: merch_1,
     title: "Mamafesta T-Shirt - Grey",
     price: "20.00",
+    url: "https://www.facebook.com/Mamafesta/posts/festa-merch-now-available-shirts-15-s-m-l-xl-super-soft-next-level-tees-grey-shi/1523369217687559/"
   },
   {
     img: merch_2,
     title: "The Mammoths T Shirt - Tan",
     price: "20.00",
+    url: "https://www.facebook.com/Mamafesta/posts/festa-merch-now-available-shirts-15-s-m-l-xl-super-soft-next-level-tees-grey-shi/1523369217687559/"
   },
 ];
 

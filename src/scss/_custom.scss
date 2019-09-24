@@ -614,3 +614,12 @@ section {
   height: calc(100vh - 120px) !important;
   width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}

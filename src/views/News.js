@@ -22,20 +22,22 @@ class News extends Component {
             <h2>news</h2>
             {data.newsItems.map((item, index) => {
               return (
-                <Row className="news-item" key={index}>
-                  <Col md="6" sm="12">
-                    <img src={item.img} alt="" />
-                  </Col>
-                  <Col md="6" sm="12" className="text-center">
-                    <div className="title">{item.title}</div>
-                    <div className="content">{item.content}</div>
-                    <div className="read-more">
-                      <Button color="dark" outline className="btn-pill read-more">
-                        Read More
-                      </Button>
-                    </div>
-                  </Col>
-                </Row>
+                <a href={item.url}>
+                  <Row className="news-item" key={index}>
+                    <Col md="6" sm="12">
+                      <img src={item.img} alt="" />
+                    </Col>
+                    <Col md="6" sm="12" className="text-center">
+                      <div className="title">{item.title}</div>
+                      <div className="content">{item.content}</div>
+                      <div className="read-more">
+                        <Button color="dark" outline className="btn-pill read-more">
+                          Read More
+                        </Button>
+                      </div>
+                    </Col>
+                  </Row>
+                </a>
               );
             })}
           </Container>
