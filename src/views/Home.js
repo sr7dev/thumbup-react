@@ -18,7 +18,7 @@ class Home extends Component {
         <div className="social-icons">
           {socialItems.map((item, index) => {
             return (
-              <a href={item.url} key={index}>
+              <a href={item.url} key={index} target="_blank" rel="noopener noreferrer">
                 <img className="social-icon" src={item.img_url} alt="" />
               </a>
             );

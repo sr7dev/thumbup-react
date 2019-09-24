@@ -28,7 +28,7 @@ class Tour extends Component {
                     <div className="month">{item.month}</div>
                   </Col>
                   <Col xs="6" md="6" className="get-ticket">
-                    <a href={item.url}>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
                       <div className="title">{item.title}</div>
                       <div className="content">{item.address}</div>
                     </a>

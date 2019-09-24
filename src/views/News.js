@@ -22,7 +22,7 @@ class News extends Component {
             <h2>news</h2>
             {data.newsItems.map((item, index) => {
               return (
-                <a href={item.url}>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <Row className="news-item" key={index}>
                     <Col md="6" sm="12">
                       <img src={item.img} alt="" />

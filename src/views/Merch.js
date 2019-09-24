@@ -24,7 +24,7 @@ class Merch extends Component {
               {data.merchItems.map((item, index) => {
                 return (
                   <Col md="4" key={index}>
-                    <a href={item.url}>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
                       <div className="merch-item">
                         <img src={item.img} alt="" />
                         <div>

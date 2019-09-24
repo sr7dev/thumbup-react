@@ -22,7 +22,7 @@ class Music extends Component {
             <h2>music</h2>
             {data.musicItems.map((item, index1) => {
               return (
-                <a href={item.url}>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <Row className="music-items" key={index1}>
                     <Col md="6">
                       <div className="music-item">
